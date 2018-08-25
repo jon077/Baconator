@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{86CD95D1-11F9-62D3-85CF-0EC13AB39299}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MC_BetterJump.cs">
+    <Files>
+      <File FileName="Assets/MC_Move.cs" Line="7" Column="32" />
+      <File FileName="Assets/MC_BetterJump.cs" Line="13" Column="50" />
+      <File FileName="Assets/Player_Health.cs" Line="35" Column="9" />
+      <File FileName="Assets/CameraSystem.cs" Line="23" Column="62" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
