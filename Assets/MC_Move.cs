@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MC_Move : MonoBehaviour {
 
-    public int playerSpeed = 10;
+    public int playerSpeed = 16;
     private bool facingRight = false;
-    public int playerJumpPower = 1250;
+    public int playerJumpPower = 2550;
     private float moveX;
-
+    private bool isGrounded = true;
 
 
 	// Use this for initialization

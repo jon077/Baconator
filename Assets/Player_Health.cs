@@ -5,36 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour {
 
-
-    public int health;
-    public bool hasDied;
-
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
-        hasDied = false;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (gameObject.transform.position.y < -7) {
-            hasDied = true;
+            Die();
         }
-
-        if (hasDied == true) {
-            StartCoroutine("Die");
-            
-        }
-		
 	}
 
-    IEnumerator Die () {
-        Debug.Log("Player has fallen");
-        yield return new WaitForSeconds(2);
-
+    void Die () {
         Debug.Log("Player has died");
         SceneManager.LoadScene("wip_1");
-        yield return null;
     }
 
 }
