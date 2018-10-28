@@ -8,7 +8,7 @@ public class MC_Move : MonoBehaviour {
     private bool facingRight = false;
     public int playerJumpPower = 2550;
     private float moveX;
-
+    private bool isGrounded = true;
 
 
 	// Use this for initialization
