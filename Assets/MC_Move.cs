@@ -8,7 +8,7 @@ public class MC_Move : MonoBehaviour {
     private bool facingRight = false;
     public int playerJumpPower = 2550;
     private float moveX;
-    private bool isGrounded = true;
+    public bool isGrounded = false;
 
 
 	// Use this for initialization
@@ -29,7 +29,7 @@ public class MC_Move : MonoBehaviour {
         //CONTROLS
 
         moveX = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") && isGrounded == true){
             Jump();
         }
         //ANIMATIONS
@@ -50,6 +50,7 @@ public class MC_Move : MonoBehaviour {
     void Jump() {
         //JUMPING CODE
         GetComponent<Rigidbody2D>().AddForce(Vector2.up* playerJumpPower);
+        isGrounded = false;
     }
 
     void FlipPlayer() {
@@ -60,6 +61,14 @@ public class MC_Move : MonoBehaviour {
         transform.localScale = localScale;
 
         
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+
+        if(collision.collider.gameObject.tag == "Ground"){
+            isGrounded = true;
+        }
     }
 }
 
