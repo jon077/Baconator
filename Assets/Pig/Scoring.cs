@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,15 +28,17 @@ public class Scoring : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D trigger){
 
-        if(trigger.gameObject.name == "FinishLine"){
+        GameObject gameObject = trigger.gameObject;
+
+        if(gameObject.name == "FinishLine"){
             Debug.Log("Player reached the Finish Line: ");
 
             CountScore();
-        }else if(trigger.gameObject.tag == "Broccoli"){
+        }else if(gameObject.tag == "Broccoli"){
             playerScore += 10;
-            Destroy(trigger.gameObject);
+            Destroy(gameObject);
+
         }
-        
     }
 
     void CountScore(){
@@ -43,5 +46,10 @@ public class Scoring : MonoBehaviour {
 
         Debug.Log("Score: " + playerScore);
 
+    }
+
+    internal void addEnemyPoints()
+    {
+        Debug.Log("Add Enemy Points");
     }
 }

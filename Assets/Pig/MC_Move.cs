@@ -70,6 +70,19 @@ public class MC_Move : MonoBehaviour {
 
         if(hit2D.distance < 1.7f && hit2D.collider.tag == "Enemy"){            
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10000);
+
+            GameObject enemy = hit2D.collider.gameObject;
+
+            //Disable script and collider to allow the enemy to fall
+            enemy.GetComponent<BoxCollider2D>().enabled = false;
+            enemy.GetComponent<Crab1_Move>().enabled = false;
+
+            Rigidbody2D enemyBody = enemy.GetComponent<Rigidbody2D>();
+            enemyBody.AddForce(Vector2.right * 200);
+            enemyBody.gravityScale = 4;
+            enemyBody.freezeRotation = false;
+
+            GetComponent<Scoring>().addEnemyPoints();
         }
 
         if(hit2D.distance < 1.7f && hit2D.collider.tag != "Enemy"){            

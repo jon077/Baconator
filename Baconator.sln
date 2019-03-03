@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{86CD95D1-11F9-62D3-85CF-0EC13AB39299}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{CA2435AE-54D6-6F2C-E2D6-15191815761B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,11 +15,12 @@ Global
 		{86CD95D1-11F9-62D3-85CF-0EC13AB39299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86CD95D1-11F9-62D3-85CF-0EC13AB39299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86CD95D1-11F9-62D3-85CF-0EC13AB39299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2435AE-54D6-6F2C-E2D6-15191815761B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2435AE-54D6-6F2C-E2D6-15191815761B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2435AE-54D6-6F2C-E2D6-15191815761B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2435AE-54D6-6F2C-E2D6-15191815761B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
